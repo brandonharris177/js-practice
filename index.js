@@ -35,17 +35,44 @@
 
 // console.log(fibonacci(10));
 
-// Andre Breton
+// // Andre Breton
+
+// function fibonacci(size) {
+//     var num1 = 0, num2 = 0, num3 = 1, result = [num2, num3], num4;
+
+//     while (2 + num1++ < size) {
+//         num4 = num2 + num3;
+//         result.push(num3 = (num2 = num3, num4));
+//     }
+
+//     return result;
+// }
+
+// console.log(fibonacci(10));
+
+// Dan Brown
 
 function fibonacci(size) {
-    var num1 = 0, num2 = 0, num3 = 1, result = [num2, num3], num4;
+    var num = [0,1,1];
 
-    while (2 + num1++ < size) {
-        num4 = num2 + num3;
-        result.push(num3 = (num2 = num3, num4));
+    count  = 3,
+
+    vector = 1.61803;
+
+    while (count < size) {
+        count = count + 1;
+
+        num.push(
+            Math.round(num[count -2] * vector)
+        );    
     }
 
-    return result;
+    if(num.length > size) {
+        num = num.slice(0, size)
+    }
+
+
+    return num;
 }
 
-console.log(fibonacci(10));
+console.log(fibonacci(2));
