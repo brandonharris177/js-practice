@@ -60,8 +60,7 @@ function fibonacci(size) {
     vector = 1.61803;
 
     while (count < size) {
-        count = count + 1;
-
+        count++;
         num.push(
             Math.round(num[count -2] * vector)
         );    
@@ -70,9 +69,7 @@ function fibonacci(size) {
     if(num.length > size) {
         num = num.slice(0, size)
     }
-
-
     return num;
 }
 
-console.log(fibonacci(2));
+console.log(fibonacci(8));
