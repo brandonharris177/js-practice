@@ -50,26 +50,26 @@
 
 // console.log(fibonacci(10));
 
-// Dan Brown
+// // Dan Brown
 
-function fibonacci(size) {
-    var num = [0,1,1];
+// function fibonacci(size) {
+//     var num = [0,1,1];
 
-    count  = 3,
+//     count  = 3,
 
-    vector = 1.61803;
+//     vector = 1.61803;
 
-    while (count < size) {
-        count++;
-        num.push(
-            Math.round(num[count -2] * vector)
-        );    
-    }
+//     while (count < size) {
+//         count++;
+//         num.push(
+//             Math.round(num[count -2] * vector)
+//         );    
+//     }
 
-    if(num.length > size) {
-        num = num.slice(0, size)
-    }
-    return num;
-}
+//     if(num.length > size) {
+//         num = num.slice(0, size)
+//     }
+//     return num;
+// }
 
-console.log(fibonacci(8));
+// console.log(fibonacci(8));
